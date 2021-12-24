@@ -68,3 +68,7 @@
 @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels\\?region=.*") {
   .awsui-table-container > table > tbody > tr > td:nth-child(5) {filter:blur(5px);} /* ARN */
 }
+
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels/arn:aws:ivs.*\\?region=.*") {
+  .CopyLine {filter:blur(5px);} /* ARN */
+}
