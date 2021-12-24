@@ -20,10 +20,10 @@
 
 /* AWS Lambda */
 
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/lambda/home\\?region=.+#/functions") {
-  #lambda-listFunctions > awsui-table > div > div.awsui-table-container > table > tbody > tr > td:nth-child(2) > span > a {filter:blur(5px);} /* function list */
-  #lambda-listFunctions > awsui-table > div > div.awsui-table-container > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > a {filter:blur(0);} /* 1st line */
-}
+/* @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/lambda/home\\?region=.+#/functions") {
+  #lambda-listFunctions > awsui-table > div > div.awsui-table-container > table > tbody > tr > td:nth-child(2) > span > a {filter:blur(5px);} /* function list
+  #lambda-listFunctions > awsui-table > div > div.awsui-table-container > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > a {filter:blur(0);} /* 1st line
+} */
 
 @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/lambda/home\\?region=.+#/functions/.+") {
   #app-designer > section > div > div > div > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > span > span:nth-child(2) {filter:blur(5px);} /* ARN */
