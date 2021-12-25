@@ -72,3 +72,8 @@
 @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels/arn:aws:ivs.*\\?region=.*") {
   .CopyLine {filter:blur(5px);} /* ARN */
 }
+
+/* SES */
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sesv2/home\\?region=.*/verified-identities/.*") {
+  .awsui-util-copy-text {filter:blur(5px);} /* ARN */
+}
