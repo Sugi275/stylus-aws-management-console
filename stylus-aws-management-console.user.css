@@ -77,3 +77,13 @@
 @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sesv2/home\\?region=.*/verified-identities/.*") {
   .awsui-util-copy-text {filter:blur(5px);} /* ARN */
 }
+
+/* VPC */
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/vpc/home\\?region=.*#vpcs.*") { /* VPC */
+  div[data-awsui-column-layout-root] > div:nth-child(2) > div:nth-child(4) > div:nth-child(2) {filter:blur(5px);} /* Owner ID */
+}
+
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/vpc/home\\?region=.*#subnet.*") { /* subnet */
+  div[data-awsui-column-layout-root] > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) {filter:blur(5px);} /* Owner */
+  div[data-awsui-column-layout-root] > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {filter:blur(5px);} /* Subnet ARN */
+}
