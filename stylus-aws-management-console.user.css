@@ -8,7 +8,7 @@
 @license        MIT License
 ==/UserStyle== */
 
-@-moz-document domain("console.aws.amazon.com") {
+@-moz-document domain("console.aws.amazon.com") { /* AWS Top Bar */
   #nav-usernameMenu{filter:blur(5px);}
   #iam-sidebar > if-feature > div > div.iam-options > div > span:nth-child(2) > span.ng-binding.ng-scope {filter:blur(5px);}
 }
