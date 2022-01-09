@@ -13,32 +13,15 @@
   #iam-sidebar > if-feature > div > div.iam-options > div > span:nth-child(2) > span.ng-binding.ng-scope {filter:blur(5px);}
 }
 
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/iot/home\\?region=.+#/settings") {
-  /* AWS IoT Core: Endpoint */
-  #spa div.copyIcon > div > div {filter:blur(4px);}
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/iot/home\\?region=.+#/settings") { /* AWS IoT Core */
+  #spa div.copyIcon > div > div {filter:blur(4px);} /* Endpoint */
 }
 
-/* AWS Lambda */
-
-/* @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/lambda/home\\?region=.+#/functions") {
-  #lambda-listFunctions > awsui-table > div > div.awsui-table-container > table > tbody > tr > td:nth-child(2) > span > a {filter:blur(5px);} /* function list
-  #lambda-listFunctions > awsui-table > div > div.awsui-table-container > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > a {filter:blur(0);} /* 1st line
-} */
-
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/lambda/home\\?region=.+#/functions/.+") {
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/lambda/home\\?region=.+#/functions/.+") { /* AWS Lambda */
   #app-designer > section > div > div > div > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > span > span:nth-child(2) {filter:blur(5px);} /* ARN */
 }
 
-/* Amazon CloudWatch Logs */
-/* @-moz-document regexp(".+") { /* Effecive to very large */
-  #awsui-expandable-section-0 > span > awsui-column-layout > div > span > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2){filter:blur(5px);} /* ARN */
-  span.logs__log-events-table__cell {filter:blur(5px);} /* log
-  div.logs__events__json {filter:blur(5px);} /* log
-  tr:nth-child(2) div.logs__events__json {filter:blur(0);} /* 2nd line
-} */
-
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sns/v3/home\\?region=.+#/.+") {
-  /* Amazon SNS */
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sns/v3/home\\?region=.+#/.+") {  /* Amazon SNS */
   #create-sub-topic-arn {filter:blur(4px);}
   #create-sub-destination:not(:placeholder-shown){filter:blur(4px);}
 
@@ -52,32 +35,29 @@
   #app div.awsui-util-spacing-v-s:nth-child(1) > div:nth-child(2) > div:nth-child(2) {filter:blur(5px);}
 }
 
-/* AWS IAM */
-@-moz-document regexp("https://console\\.aws\\.amazon\\.com/iamv2/home?.+home") {
+@-moz-document regexp("https://console\\.aws\\.amazon\\.com/iamv2/home?.+home") { /* AWS IAM */
   .awsui-util-copy-text {filter:blur(5px);}
 }
 
-@-moz-document regexp("https://console\\.aws\\.amazon\\.com/iam/home?.+/(users|roles)/.*") {
+@-moz-document regexp("https://console\\.aws\\.amazon\\.com/iam/home?.+/(users|roles)/.*") { /* AWS IAM */
   .user-select-all {filter:blur(5px);}
   a[href*="signin.aws.amazon.com"] {filter:blur(5px);}
   .account-id-value  {filter:blur(5px);}
 }
 
-/* Amazon IVS */
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels\\?region=.*") {
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels\\?region=.*") { /* Amazon IVS */
   .awsui-table-container > table > tbody > tr > td:nth-child(5) {filter:blur(5px);} /* ARN */
 }
 
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels/arn:aws:ivs.*\\?region=.*") {
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/ivs/channels/arn:aws:ivs.*\\?region=.*") { /* Amazon IVS */
   .CopyLine {filter:blur(5px);} /* ARN */
 }
 
-/* SES */
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sesv2/home\\?region=.*/verified-identities/.*") {
+
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sesv2/home\\?region=.*/verified-identities/.*") { /* SES */
   .awsui-util-copy-text {filter:blur(5px);} /* ARN */
 }
 
-/* VPC */
 @-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/vpc/home\\?region=.*#vpcs.*") { /* VPC */
   div[data-awsui-column-layout-root] > div:nth-child(2) > div:nth-child(4) > div:nth-child(2) {filter:blur(5px);} /* Owner ID */
 }
@@ -87,13 +67,12 @@
   div[data-awsui-column-layout-root] > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {filter:blur(5px);} /* Subnet ARN */
 }
 
-/* CloudFront */
-@-moz-document regexp("https://console\\.aws\\.amazon\\.com/cloudfront/v3/home\\?region=.*distributions.*") { /* Distributions */
+
+@-moz-document regexp("https://console\\.aws\\.amazon\\.com/cloudfront/v3/home\\?region=.*distributions.*") { /* CloudFront Distributions */
      div.awsui_tabs-content-wrapper_14rmt_mp1x5_191 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {filter:blur(5px);} /* Distribution ARN */
 }
 
-/* SQS */
-@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sqs/v2/home\\?region=.*queues.+") { /* Distributions */
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/sqs/v2/home\\?region=.*queues.+") { /* SQS */
     #queue-arn {filter:blur(5px);} /* ARN */
     #queue-url {filter:blur(5px);} /* URL */
 }
