@@ -13,6 +13,10 @@
   #iam-sidebar > if-feature > div > div.iam-options > div > span:nth-child(2) > span.ng-binding.ng-scope {filter:blur(5px);}
 }
 
+@-moz-document regexp("https://.+\\.console\\.aws\\.amazon\\.com/managedblockchain/home\\?region=.+hlf/network/.*") { /* Managed Blockchain */
+  div[data-awsui-column-layout-root] > div:nth-child(5) > awsui-form-field:nth-child(1) > div:nth-child(1) > div:nth-child(2) {filter:blur(5px);} /* Network ARN */
+}
+
 @-moz-document regexp("https://console\\.aws\\.amazon\\.com/cloudfront/v3/home\\?region=.*distributions.*") { /* CloudFront Distributions */
      div.awsui_tabs-content-wrapper_14rmt_mp1x5_191 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {filter:blur(5px);} /* Distribution ARN */
 }
