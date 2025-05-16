@@ -79,3 +79,7 @@
   div[data-awsui-column-layout-root] > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) {filter:blur(5px);} /* Owner */
   div[data-awsui-column-layout-root] > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {filter:blur(5px);} /* Subnet ARN */
 }
+
+@-moz-document regexp("https://support\\.console\\.aws\\.amazon\\.com/support/.*") { /* サポートページ アカウント情報 */
+  p[data-test="account-number"] {filter:blur(5px);}
+}
